@@ -213,6 +213,7 @@
 
 * git init
 * git remote add origin git@gitlab.com:swaimware/eightball.git
+* git remote add origin https://github.com/Swaimware/test.git
 * git add .
 * git status
 * git commit -m "initial commit"
@@ -222,6 +223,7 @@
 * git pull
 * which git   shows location
 * git --version
+* git remote rm origin       removes the origin
 
 
 
