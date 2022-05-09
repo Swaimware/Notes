@@ -41,9 +41,9 @@ others include md son js html css sh
 
 Here is a [link to yahoo](https://yahoo.com)  Or you can do them in the raw <http://yahoo.com>
 
-more bracket fun   mail <mailto:swaimware@gmail.com>  or phone <tel:503-382-0524> will make phone call
+more bracket fun   mail <mailto:email@gmail.com>  or phone <tel:XXX-XXX-XXXX> will make phone call
 
-images from local ![gnome](home/swaimware/Downloads/cute_girls_29.jpg) 
+images from local ![gnome](home/user/Downloads/cute_girls_29.jpg) 
 
 images from link [![banarama pic](https://www.barnorama.com/wp-content/uploads/2018/06/cute_girls_29.jpg)](https://www.banorama.com)
 
