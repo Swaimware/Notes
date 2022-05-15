@@ -2,7 +2,10 @@
 #then when you hover over items in UI it will show
 #the python required to run that
 
-import bby
+# ALT P runs scripts
+# F3 is search
+
+import bpy
 # you can import just the part of the library required
 from math import radians
 
@@ -51,4 +54,41 @@ for face in mesh.polygons:
 mod_displace = so.modifiers.new("My Displacement", 'DISPLACE')
 
 #create the texture
-new_text = bpy.data.textures.new("My Texture", 'DISTORTED' )
+#https://docs.blender.org/api/current/bpy.types.Texture.html
+new_tex = bpy.data.textures.new("My Texture", 'DISTORTED_NOISE')
+
+#change the texture settings
+new_tex.noise_scale = 2.0
+
+#assign the texture to the displacement modifier
+mod_displace.texture = new_tex
+
+#create the material, note the 'name = ' is just being specific on what you are setting
+new_mat = bpy.data.materials.new(name = "My Material")
+
+#add material to selected object
+so.data.materials.append(new_mat)
+
+new_mat.use_nodes = True
+
+nodes = new_mat.node_tree.nodes
+
+material_output = nodes.get("Material Output")
+
+node_emission = nodes.new(type='ShaderNodeEmission')
+
+#The outup and inputs of material node blocks are arrays
+#with zero being the top input/output and counting up from there
+
+#set color value, input 0, of the emission shader node to cyan
+#note the last number is the output
+node_emission.inputs[0].default_value = ( 0.0, 0.3, 1.0, 1)
+
+#increase the strength or intensity of the color
+node_emission.inputs[1].default_value = 500.0
+
+#link the them together
+links = new_mat.node_tree.links
+new_link = links.new(node_emission.outputs[0], material_output.inputs[0])
+
+#to turn this into a template that can be ran use
