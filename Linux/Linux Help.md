@@ -27,9 +27,9 @@
 
 ### Character
 
-* >   redirect output   example  ls -l > output.txt
-* > output.txt   creates empty txt file
-* >>  redirect that appends the file as opposed to overwriting it
+* ' >   redirect output   example  ls -l > output.txt
+* ' > output.txt   creates empty txt file
+* ' >>  redirect that appends the file as opposed to overwriting it
 * 2>  redirect error  0 = Standard Input 1 = Standard Output 2 = Standard error
 * &>  redirects both output and error
 * ls -l /bin/usr 2> /dev/null   sends error to bit bucket - throws away
@@ -57,7 +57,7 @@
 * clear clears screen
 * cp ~/.vimrc .   this command copies .vimrc on home directory to current directory
 * cp options: -a --archive used to copy permissions with -i gives warning if file/dir exists
-*             -r --recursive   -u --update copies if newer or doesnt exist -v --verbose
+* -r --recursive   -u --update copies if newer or doesnt exist -v --verbose
 * CTRL C  will intterupt running program
 * CTRL D  end of file
 * CTRL S  suspends terminal  dont do
