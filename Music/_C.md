@@ -8,7 +8,7 @@
 
 * C E G - I
 * F A C - IV
-* A C D - V
+* G B D - V
 
 ### Inversion
 
@@ -24,7 +24,7 @@
 
 * C Eb G - I
 * F Ab C - IV
-* Ab Bb D - V
+* G Bb D - V
 
 ### Inversion
 
